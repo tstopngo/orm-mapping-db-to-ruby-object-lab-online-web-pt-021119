@@ -109,7 +109,7 @@ class Student
     SELECT * FROM students WHERE grade = ?
     SQL
     
-    DB[:conn].execute(sql_query).map do |row|
+    DB[:conn].execute(sql_query, num).map do |row|
       self.new_from_db(row)
     end
   end
