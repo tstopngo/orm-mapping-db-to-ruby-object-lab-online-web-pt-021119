@@ -33,10 +33,7 @@ class Student
     
      test =  DB[:conn].execute(sql_find, name).map do |row|
       self.new_from_db(row)
-    end.first
-    
-    binding.pry
-  
+    end
   end
   
   def save
