@@ -31,7 +31,7 @@ class Student
       LIMIT 1
       SQL
     
-     test =  DB[:conn].execute(sql_find, name).map do |row|
+     DB[:conn].execute(sql_find, name).map do |row|
       self.new_from_db(row)
     end.first
   end
